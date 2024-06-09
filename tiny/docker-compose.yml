@@ -6,7 +6,7 @@ services:
     ports:
       - 3223:80
     environment:
-      - SELF_URL_PATH=http://localhost:181 # please change to your own domain
+      - SELF_URL_PATH=http://localhost:3223 # please change to your own domain
       - DB_PASS=ttrss # use the same password defined in `database.postgres`
       - PUID=1000
       - PGID=1000
