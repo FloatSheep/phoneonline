@@ -19,7 +19,7 @@ services:
             - browserless  # marked
 
     browserless:  # marked
-        image: registry.cn-shanghai.aliyuncs.com/fs_docker/browserless/chrome  # marked
+        image: registry.cn-shanghai.aliyuncs.com/fs_docker/chrome  # marked
         restart: always  # marked
         ulimits:  # marked
           core:  # marked
