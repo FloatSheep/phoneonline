@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    image: postgres:15-alpine
+    image: registry.cn-shanghai.aliyuncs.com/fs_docker/postgres:15-alpine
     restart: unless-stopped
     env_file:
       - .env
@@ -14,7 +14,7 @@ services:
       - db:/var/lib/postgresql/data
 
   app:
-    image: cthulhoo/ttrss-fpm-pgsql-static:latest
+    image: registry.cn-shanghai.aliyuncs.com/fs_docker/ttrss-fpm-pgsql-static:latest
     restart: unless-stopped
     env_file:
       - .env
@@ -38,7 +38,7 @@ services:
 #    command: /opt/tt-rss/dcron.sh -f
 
   updater:
-    image: cthulhoo/ttrss-fpm-pgsql-static:latest
+    image: registry.cn-shanghai.aliyuncs.com/fs_docker/ttrss-fpm-pgsql-static:latest
     restart: unless-stopped
     env_file:
       - .env
@@ -50,7 +50,7 @@ services:
     command: /opt/tt-rss/updater.sh
 
   web-nginx:
-    image: cthulhoo/ttrss-web-nginx:latest
+    image: registry.cn-shanghai.aliyuncs.com/fs_docker/ttrss-web-nginx:latest
     restart: unless-stopped
     env_file:
       - .env
